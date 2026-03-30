@@ -1,4 +1,4 @@
-### Samsung Smart Bridge: Flutter + FastAPI IoT Controller
+# Samsung Smart Bridge: Flutter + FastAPI IoT Controller
 Este proyecto es un ecosistema de control remoto IoT que permite comandar una Smart TV Samsung a través de una interfaz moderna en Flutter, utilizando un bridge de backend desarrollado en FastAPI. El sistema actúa como un middleware que traduce peticiones HTTP en comandos de WebSocket específicos para el protocolo de Samsung.
 
 ## Características principales
@@ -18,21 +18,21 @@ Frontend (Mobile/Web): Captura las interacciones del usuario y dispara peticione
 Backend (Middleware): Un servidor Python que mantiene el socket activo con la TV y gestiona el handshake de autenticación.
 
 ## Instalación y Configuración
-# 1. Requisitos previos
+### 1. Requisitos previos
 Python 3.10+
 
 Flutter SDK
 
 Samsung Smart TV (2016+) conectada a la misma red Wi-Fi.
 
-# 2. Configuración del Backend
+### 2. Configuración del Backend
 Bash
 cd backend_bridge
 python -m venv venv
 source venv/Scripts/activate  # En Windows: .\venv\Scripts\activate
 pip install -r requirements.txt
 python main.py
-# 3. Ejecución del Frontend
+### 3. Ejecución del Frontend
 Bash
 cd flutter_remote_ui
 flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080
